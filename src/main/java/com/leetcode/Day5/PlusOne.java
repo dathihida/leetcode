@@ -71,7 +71,7 @@ public class PlusOne {
         }
         return max;
     }
-
+    // chinh sua sortNumber
     public static int[] sortNumbers(int[] numbers) {
         int m = 0;
         int n = numbers.length-1;
