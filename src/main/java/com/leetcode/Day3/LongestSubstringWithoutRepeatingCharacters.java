@@ -6,8 +6,10 @@ import java.util.List;
 public class LongestSubstringWithoutRepeatingCharacters {
 
     public static void main(String[] args) {
-                lengthOfLongestSubstring("pwwkew");
-
+        int index = lengthOfLongestSubstring("pwwkew");
+        int index1 = lengthOfLongestSubstring("abcabcbb");
+        System.out.println(index);
+        System.out.println(index1);
     }
 
     public static int lengthOfLongestSubstring(String s) {
@@ -40,15 +42,18 @@ public class LongestSubstringWithoutRepeatingCharacters {
         // a = 97
         // 1 = 98(b) - 97 => n = 1(buoc nhay)
         // 1 = 99(c) - 98 => n = 1(buoc nhay)
-
+        List<Integer> list = new ArrayList<>();
         for(int i = 0; i < s.length(); i++) {
-//            char index = s.charAt(i);
-//            int j = index;
-//            int k = next;
-//            int temp = k - j;
-//
-//            System.out.println(temp);
+            System.out.println(s.charAt(i));
+            for(int j = 1; j < s.length(); j++){
+                System.out.println(s.charAt(j));
+                if(s.charAt(j) - s.charAt(i) == 1){
+                    list.add(j);
+                }
+
+            }
         }
-        return 1;
+        System.out.println(list);
+        return list.size();
     }
 }
